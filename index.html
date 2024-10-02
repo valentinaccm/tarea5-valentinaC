@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta Horizontal</title>
+    <style>
+
+        :root {
+            --tono: 330;
+            --complemento: 190;
+            --color-primario: hsla(var(--tono), 100%, 85%, 1);
+            --color-primario-claro: hsla(var(--tono), 100%, 95%, 1);
+            --color-primario-medio: hsla(var(--tono), 100%, 75%, 1);
+            --color-primario-oscuro: hsla(var(--tono), 100%, 65%, 1);
+            --color-sombra-degradado: rgba(255, 105, 180, 0.5);
+            --color-sombra-degradado-dos: rgba(255, 20, 147, 0.3);
+        }
+
+        body {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 16px;
+        }
+
+        .card {
+            background-color: var(--color-primario);
+            border-radius: 16px;
+            box-shadow: 0px 8px 16px var(--color-sombra-degradado), 0px 8px 30px var(--color-sombra-degradado-dos);
+            width: 700px;
+            text-align: left;
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding: 16px;
+            gap: 16px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            color: white;
+            margin: 0;
+        }
+
+        .card p {
+            color: #f5e1e6;
+            font-size: 0.9rem;
+            margin: 8px 0;
+        }
+
+        .card .buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .card .btn {
+            display: flex;
+            align-items: center;
+            padding: 10px 12px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-align: left;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            flex: 1;
+            justify-content: center;
+            height: 40px;
+            position: relative;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--color-primario-oscuro);
+            color: white;
+        }
+
+        .btn-instagram {
+            background-color: var(--color-primario-claro);
+            color: var(--color-primario);
+            border: 2px solid var(--color-primario);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-instagram:hover {
+            background-color: var(--color-primario);
+            color: white;
+        }
+
+        .btn img {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            width: 20px;
+            height: 20px;
+            transform: translateY(-50%);
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+                max-width: 700px;
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .card-content {
+                text-align: center;
+            }
+
+            .card img {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .card .buttons {
+                justify-content: center;
+            }
+
+            .btn img {
+                left: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="c:\Users\ivanc\Downloads\foto de mi.jpg" alt="Imagen de perfil">
+        <div class="card-content">
+            <div>
+                <h2>Valentina Carrasco</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, temporibus habitasse ullamcorper bibendum sodales.</p>
+            </div>
+            <div class="buttons">
+                <a href="https://wa.me/56997750904" target="_blank" class="btn btn-whatsapp">
+                    <img src="c:\Users\ivanc\Downloads\whatsapp-line.png" alt="WhatsApp Icon">
+                    WhatsApp
+                </a>
+                <a href="https://www.instagram.com/vale_c2m" target="_blank" class="btn btn-instagram">
+                    <img src="c:\Users\ivanc\Downloads\instagram-line.png" alt="Instagram Icon">
+                    Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
